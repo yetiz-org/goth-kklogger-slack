@@ -1,4 +1,4 @@
-module kklogger-slack
+module github.com/kklab-com/goth-kklogger-slack
 
 go 1.16
 
