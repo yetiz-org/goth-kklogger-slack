@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"net/url"
 
-	kklogger "github.com/kklab-com/goth-kklogger"
-	"github.com/kklab-com/goth-kkutil/value"
+	kklogger "github.com/yetiz-org/goth-kklogger"
+	"github.com/yetiz-org/goth-kkutil/value"
 )
 
 type KKLoggerSlackHook struct {
