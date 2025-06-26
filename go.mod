@@ -5,8 +5,8 @@ go 1.23
 toolchain go1.24.0
 
 require (
-	github.com/yetiz-org/goth-kklogger v0.0.0-20250611122328-03d2bbd5bc69
-	github.com/yetiz-org/goth-kkutil v0.0.0-20250611122830-a80c97dfb90a
+	github.com/yetiz-org/goth-kklogger v1.1.1
+	github.com/yetiz-org/goth-util v1.3.4
 )
 
 require (
