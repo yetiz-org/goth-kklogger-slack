@@ -163,13 +163,7 @@ func (h *KKLoggerSlackHook) Send(level kklogger.Level, funcName, file string, li
 	}
 
 	if funcName != "" {
-		fields = append(fields, KKLoggerSlackBlockField{
-			Type: "mrkdwn",
-			Text: "*Function*",
-		}, KKLoggerSlackBlockField{
-			Type: "plain_text",
-			Text: funcName,
-		})
+		msg = fmt.Sprintf("%s\nFunction: %s", msg, funcName)
 	}
 
 	if file != "" {
@@ -177,13 +171,8 @@ func (h *KKLoggerSlackHook) Send(level kklogger.Level, funcName, file string, li
 		if line > 0 {
 			fileInfo = fmt.Sprintf("%s:%d", file, line)
 		}
-		fields = append(fields, KKLoggerSlackBlockField{
-			Type: "mrkdwn",
-			Text: "*File*",
-		}, KKLoggerSlackBlockField{
-			Type: "plain_text",
-			Text: fileInfo,
-		})
+		
+		msg = fmt.Sprintf("%s\nFile: %s", msg, fileInfo)
 	}
 
 	d := url.Values{}
